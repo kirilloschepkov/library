@@ -1,0 +1,58 @@
+databaseChangeLog:
+  - changeSet:
+      id: add-author1
+      author: Kirill
+      changes:
+        - insert:
+            tableName: authors
+            columns:
+              - column:
+                  name: id
+                  valueSequenceNext: authors-sequence
+              - column:
+                  name: first_name
+                  value: "first name 1"
+              - column:
+                  name: last_name
+                  value: "last name 1"
+              - column:
+                  name: middle_name
+                  value: "middle name 1"
+  - changeSet:
+      id: add-author2
+      author: Kirill
+      changes:
+        - insert:
+            tableName: authors
+            columns:
+              - column:
+                  name: id
+                  valueSequenceNext: authors-sequence
+              - column:
+                  name: first_name
+                  value: "first name 2"
+              - column:
+                  name: last_name
+                  value: "last name 2"
+              - column:
+                  name: middle_name
+                  value: "middle name 2"
+  - changeSet:
+      id: add-author3
+      author: Kirill
+      changes:
+        - insert:
+            tableName: authors
+            columns:
+              - column:
+                  name: id
+                  valueSequenceNext: authors-sequence
+              - column:
+                  name: first_name
+                  value: "first name 3"
+              - column:
+                  name: last_name
+                  value: "last name 3"
+              - column:
+                  name: middle_name
+                  value: "middle name 3"
