@@ -1,0 +1,40 @@
+databaseChangeLog:
+  - changeSet:
+      id: add-publisher1
+      author: Kirill
+      changes:
+        - insert:
+            tableName: publishers
+            columns:
+              - column:
+                  name: id
+                  valueSequenceNext: publishers_sequence
+              - column:
+                  name: name
+                  value: "publisher name 1"
+  - changeSet:
+      id: add-publisher2
+      author: Kirill
+      changes:
+        - insert:
+            tableName: publishers
+            columns:
+              - column:
+                  name: id
+                  valueSequenceNext: publishers_sequence
+              - column:
+                  name: name
+                  value: "publisher name 2"
+  - changeSet:
+      id: add-publisher3
+      author: Kirill
+      changes:
+        - insert:
+            tableName: publishers
+            columns:
+              - column:
+                  name: id
+                  valueSequenceNext: publishers_sequence
+              - column:
+                  name: name
+                  value: "publisher name 3"

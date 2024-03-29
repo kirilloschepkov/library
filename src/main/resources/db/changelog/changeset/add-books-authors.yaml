@@ -1,0 +1,53 @@
+databaseChangeLog:
+  - changeSet:
+      id: add-book-author1
+      author: Kirill
+      changes:
+        - insert:
+            tableName: books-authors
+            columns:
+              - column:
+                  name: book_id
+                  value: "1"
+              - column:
+                  name: author_id
+                  value: "2"
+  - changeSet:
+      id: add-book-author2
+      author: Kirill
+      changes:
+        - insert:
+            tableName: books-authors
+            columns:
+              - column:
+                  name: book_id
+                  value: "2"
+              - column:
+                  name: author_id
+                  value: "3"
+  - changeSet:
+      id: add-book-author3
+      author: Kirill
+      changes:
+        - insert:
+            tableName: books-authors
+            columns:
+              - column:
+                  name: book_id
+                  value: "1"
+              - column:
+                  name: author_id
+                  value: "3"
+  - changeSet:
+      id: add-book-author4
+      author: Kirill
+      changes:
+        - insert:
+            tableName: books-authors
+            columns:
+              - column:
+                  name: book_id
+                  value: "2"
+              - column:
+                  name: author_id
+                  value: "1"
