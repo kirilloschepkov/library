@@ -1,16 +1,16 @@
 databaseChangeLog:
   - changeSet:
-        id: create-books-sequence
+        id: create-comments-sequence
         author: Kirill
         changes:
           - createSequence:
-              sequenceName: books_sequence
+              sequenceName: comments_sequence
   - changeSet:
-      id: create-books
+      id: create-comments-table
       author: Kirill
       changes:
         - createTable:
-            tableName: books
+            tableName: comments
             columns:
               - column:
                   name: id
@@ -18,19 +18,21 @@ databaseChangeLog:
                   constraints:
                     primaryKey: true
               - column:
-                  name: name
+                  name: text
                   type: varchar(225)
                   constraints:
                     nullable: false
               - column:
-                  name: publisher_id
+                  name: user_id
                   type: BIGINT
                   constraints:
                     nullable: false
-                    foreignKeyName: publisher_id
-                    references: publishers(id)
+                    foreignKeyName: user_id
+                    references: users(id)
               - column:
-                  name: publish_date
-                  type: date
+                  name: film_id
+                  type: BIGINT
                   constraints:
                     nullable: false
+                    foreignKeyName: film_id # todo: что означает foreignKeyName?
+                    references: films(id)

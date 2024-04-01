@@ -1,0 +1,58 @@
+databaseChangeLog:
+  - changeSet:
+      id: add-user1
+      author: Kirill
+      changes:
+        - insert:
+            tableName: users
+            columns:
+              - column:
+                  name: id
+                  valueSequenceNext: users_sequence
+              - column:
+                  name: name
+                  value: "Pavel"
+              - column:
+                  name: avatar_url
+                  value: "https://gravatar.com/avatar/f4712dfa0d64baeead90026a46d5731e?s=200&d=robohash&r=x"
+              - column:
+                  name: email
+                  value: "pavel@email.ru"
+  - changeSet:
+      id: add-user2
+      author: Kirill
+      changes:
+        - insert:
+            tableName: users
+            columns:
+              - column:
+                  name: id
+                  valueSequenceNext: users_sequence
+              - column:
+                  name: name
+                  value: "Alex"
+              - column:
+                  name: avatar_url
+                  value: "https://gravatar.com/avatar/ac955f33a6adf12688eba608cc4a0d6f?s=400&d=robohash&r=x"
+              - column:
+                  name: email
+                  value: "alex@email.ru"
+  - changeSet:
+      id: add-user3
+      author: Kirill
+      changes:
+        - insert:
+            tableName: users
+            columns:
+              - column:
+                  name: id
+                  valueSequenceNext: users_sequence
+              - column:
+                  name: name
+                  value: "David"
+              - column:
+                  name: avatar_url
+                  value: "https://gravatar.com/avatar/c0e59081d96ae453f063abc0b7a1e01b?s=400&d=robohash&r=x"
+              - column:
+                  name: email
+                  value: "david@email.ru"

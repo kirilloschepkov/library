@@ -1,16 +1,16 @@
 databaseChangeLog:
   - changeSet:
-        id: create-publishers-sequence
-        author: Kirill
-        changes:
-          - createSequence:
-              sequenceName: publishers_sequence
+      id: create-genres-sequence
+      author: Kirill
+      changes:
+        - createSequence:
+            sequenceName: genres_sequence
   - changeSet:
-      id: create-publishers
+      id: create-genres-table
       author: Kirill
       changes:
         - createTable:
-            tableName: publishers
+            tableName: genres
             columns:
               - column:
                   name: id

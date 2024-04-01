@@ -1,0 +1,53 @@
+databaseChangeLog:
+  - changeSet:
+      id: add-film-genre1
+      author: Kirill
+      changes:
+        - insert:
+            tableName: films-genres
+            columns:
+              - column:
+                  name: film_id
+                  value: 1
+              - column:
+                  name: genre_id
+                  value: 1
+  - changeSet:
+      id: add-film-genre2
+      author: Kirill
+      changes:
+        - insert:
+            tableName: films-genres
+            columns:
+              - column:
+                  name: film_id
+                  value: 2
+              - column:
+                  name: genre_id
+                  value: 1
+  - changeSet:
+      id: add-film-genre3
+      author: Kirill
+      changes:
+        - insert:
+            tableName: films-genres
+            columns:
+              - column:
+                  name: film_id
+                  value: 3
+              - column:
+                  name: genre_id
+                  value: 3
+  - changeSet:
+      id: add-film-genre4
+      author: Kirill
+      changes:
+        - insert:
+            tableName: films-genres
+            columns:
+              - column:
+                  name: film_id
+                  value: 3
+              - column:
+                  name: genre_id
+                  value: 1

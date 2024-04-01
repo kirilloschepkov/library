@@ -1,24 +1,24 @@
 databaseChangeLog:
   - changeSet:
-      id: create-books-authors
+      id: create-films-genres-table
       author: Kirill
       changes:
         - createTable:
-            tableName: books-authors
+            tableName: films-genres
             columns:
               - column:
-                  name: book_id
+                  name: film_id
                   type: BIGINT
                   constraints:
                     primaryKey: true
                     nullable: false
-                    foreignKeyName: book_id
-                    references: books(id)
+                    foreignKeyName: comment_film_id
+                    references: films(id)
               - column:
-                  name: author_id
+                  name: genre_id
                   type: BIGINT
                   constraints:
                     primaryKey: true
                     nullable: false
-                    foreignKeyName: author_id
-                    references: authors(id)
+                    foreignKeyName: comment_genre_id
+                    references: genres(id)

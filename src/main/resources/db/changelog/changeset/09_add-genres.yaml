@@ -1,40 +1,40 @@
 databaseChangeLog:
   - changeSet:
-      id: add-publisher1
+      id: add-genre1
       author: Kirill
       changes:
         - insert:
-            tableName: publishers
+            tableName: genres
             columns:
               - column:
                   name: id
-                  valueSequenceNext: publishers_sequence
+                  valueSequenceNext: genres_sequence
               - column:
                   name: name
-                  value: "publisher name 1"
+                  value: "Comedy"
   - changeSet:
-      id: add-publisher2
+      id: add-genre2
       author: Kirill
       changes:
         - insert:
-            tableName: publishers
+            tableName: genres
             columns:
               - column:
                   name: id
-                  valueSequenceNext: publishers_sequence
+                  valueSequenceNext: genres_sequence
               - column:
                   name: name
-                  value: "publisher name 2"
+                  value: "Drama"
   - changeSet:
-      id: add-publisher3
+      id: add-genre3
       author: Kirill
       changes:
         - insert:
-            tableName: publishers
+            tableName: genres
             columns:
               - column:
                   name: id
-                  valueSequenceNext: publishers_sequence
+                  valueSequenceNext: genres_sequence
               - column:
                   name: name
-                  value: "publisher name 3"
+                  value: "Action"
