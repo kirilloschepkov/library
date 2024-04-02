@@ -11,7 +11,7 @@ import java.util.List;
 
 @Tag(name = "Комментарии")
 @RestController
-@RequestMapping("/comments") // todo: соответствие роутам для фронта
+@RequestMapping("/comments")
 public class CommentController {
     private final CommentService service;
 
@@ -21,40 +21,28 @@ public class CommentController {
     }
 
 
-    @Operation(
-            summary = "Получить комментарии",
-            description = "Возвращает массив комментарием всех фильмов всеми пользователями"
-    )
+    @Operation(summary = "Получить комментарии", description = "Возвращает массив комментарием всех фильмов всеми пользователями")
     @GetMapping
     public List<CommentEntity> getAllComments() {
         return service.getAllComments();
     }
 
 
-    @Operation(
-            summary = "Получить комментарий",
-            description = "Возвращает комментарий с идентификатором id."
-    )
+    @Operation(summary = "Получить комментарий", description = "Возвращает комментарий с идентификатором id.")
     @GetMapping("/{commentId}")
     public CommentEntity getCommentById(@PathVariable Long commentId) {
         return service.getCommentsById(commentId);
     }
 
 
-    @Operation(
-            summary = "Получить комментарии к фильму",
-            description = "Возвращает все комментарии к фильму с идентификатором id."
-    )
+    @Operation(summary = "Получить комментарии к фильму", description = "Возвращает все комментарии к фильму с идентификатором id.")
     @GetMapping("/film/{filmId}")
     public List<CommentEntity> getCommentByFilmId(@PathVariable Long filmId) {
         return service.getCommentsByFilmId(filmId);
     }
 
 
-    @Operation(
-            summary = "Создать комментарий",
-            description = "Создает новый комментарий."
-    )
+    @Operation(summary = "Создать комментарий", description = "Создает новый комментарий.")
     @PostMapping
     public CommentEntity createComment(@RequestBody CommentEntity comment) {
         return service.createComment(comment);

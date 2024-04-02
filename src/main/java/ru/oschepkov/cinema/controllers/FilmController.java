@@ -2,32 +2,34 @@ package ru.oschepkov.cinema.controllers;
 
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
+import ru.oschepkov.cinema.dto.FilmDTO;
 import ru.oschepkov.cinema.entities.FilmEntity;
+import ru.oschepkov.cinema.mappers.FilmMapper;
 import ru.oschepkov.cinema.services.FilmService;
 
 import java.util.List;
 
 @Tag(name = "Фильмы")
 @RestController
-@RequestMapping("/films") // todo: соответствие роутам для фронта
+@RequestMapping("/films")
+@RequiredArgsConstructor
 public class FilmController {
     private final FilmService service;
-
-    @Autowired
-    public FilmController(FilmService service) {
-        this.service = service;
-    }
-
+    private final FilmMapper filmMapper;
 
     @Operation(
             summary = "Получить все фильмы",
             description = "Возвращает массив фильмов. Каждый фильм описан в виде объекта."
     )
     @GetMapping
-    public List<FilmEntity> getAllFilms() {
-        return service.getAllFilms();
+    public List<FilmDTO> getAllFilms() {
+        return service
+                .getAllFilms()
+                .stream()
+                .map(filmMapper::convertFromEntity)
+                .toList();
     }
 
 
@@ -36,8 +38,8 @@ public class FilmController {
             description = "Возвращает фильм с идентификатором id."
     )
     @GetMapping("/{filmId}")
-    public FilmEntity getFilmById(@PathVariable Long filmId) {
-        return service.getFilmById(filmId);
+    public FilmDTO getFilmById(@PathVariable Long filmId) {
+        return filmMapper.convertFromEntity(service.getFilmById(filmId)); // todo: обработка запроса отсутствующего фильма
     }
 
 
@@ -46,8 +48,12 @@ public class FilmController {
             description = "Возвращает массив фильмов с тем же жанром, что и фильм с идентификатором id"
     )
     @GetMapping("/{filmId}/similar")
-    public List<FilmEntity> getSimilarFilm(@PathVariable Long filmId) {
-        return service.getSimilarFilmById(filmId);
+    public List<FilmDTO> getSimilarFilm(@PathVariable Long filmId) {
+        return service
+                .getSimilarFilmById(filmId)
+                .stream()
+                .map(filmMapper::convertFromEntity)
+                .toList();
     }
 
 
@@ -56,8 +62,8 @@ public class FilmController {
             description = "Добавляет фильм переданный по схеме в теле post-запроса"
     )
     @PostMapping
-    public FilmEntity createFilm(@RequestBody FilmEntity film) {
-        return service.createFilm(film);
+    public FilmDTO createFilm(@RequestBody FilmEntity film) {
+        return filmMapper.convertFromEntity(service.createFilm(film));
     }
 
 
@@ -66,9 +72,10 @@ public class FilmController {
             description = "Изменяет фильм с идентификатором id на переданный в теле запроса"
     )
     @PutMapping("/{filmId}")
-    public FilmEntity updateFilm(@PathVariable Long filmId, @RequestBody FilmEntity film) {
+    public FilmDTO updateFilm(@PathVariable Long filmId, @RequestBody FilmEntity film) { // todo: схема для добавления фильма
         film.setId(filmId);
-        return service.updateFilm(film);
+        FilmEntity updatedFilm = service.updateFilm(film);
+        return filmMapper.convertFromEntity(updatedFilm);
     }
 
     @Operation(

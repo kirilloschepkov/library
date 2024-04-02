@@ -52,8 +52,12 @@ public class FilmEntity {
     @Column(name= "director")
     private String director;
 
-//    @Column(name = "starring")
-//    private List<String> starring; // todo: массив
+//    @ManyToMany(fetch = FetchType.LAZY)
+//    @JoinTable(name = "starring",
+//            joinColumns = @JoinColumn(name = "star_id"),
+//            inverseJoinColumns = @JoinColumn(name = "film_id")
+//    )
+//    private List<String> starring;
 
     @Column(name = "run_time")
     private Integer runTime;

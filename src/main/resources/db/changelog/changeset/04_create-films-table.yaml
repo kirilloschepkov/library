@@ -62,7 +62,7 @@ databaseChangeLog:
                   type: varchar(225)
                   constraints:
                     nullable: false
-#              - column: # todo: добавить связь
+#              - column:
 #                  name: starring_id
 #                  type: BIGINT
 #                  constraints:

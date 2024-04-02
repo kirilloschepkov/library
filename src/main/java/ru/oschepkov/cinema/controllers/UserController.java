@@ -11,7 +11,7 @@ import java.util.List;
 
 @Tag(name = "Пользователи")
 @RestController
-@RequestMapping("/users") // todo: соответствие роутам для фронта
+@RequestMapping("/users")
 public class UserController {
     private final UserService service;
 
