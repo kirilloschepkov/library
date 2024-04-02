@@ -1,10 +1,12 @@
-package ru.oschepkov.library.entities;
+package ru.oschepkov.cinema.entities;
 
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.hibernate.annotations.GenericGenerator;
+
+import java.util.Set;
 
 @Entity
 @Table(name = "users", schema = "PUBLIC", catalog = "DB")
@@ -15,7 +17,6 @@ public class UserEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "users_sequence")
-    // todo: связь? зачем GenericGenerator?
     @GenericGenerator(
             name = "users_sequence",
             strategy = "org.hibernate.id.enhanced.SequenceStyleGenerator",
@@ -33,4 +34,13 @@ public class UserEntity {
 
     @Column(name = "email")
     private String email;
+
+    @Column(name = "token")
+    private String token;
+
+    @OneToMany(mappedBy = "user")
+    private Set<CommentEntity> comments;
+
+    @ManyToMany(mappedBy = "likedUsers")
+    private Set<FilmEntity> favoriteFilms;
 }

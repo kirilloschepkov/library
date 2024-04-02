@@ -1,15 +1,17 @@
-package ru.oschepkov.library.entities;
+package ru.oschepkov.cinema.entities;
 
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 import org.hibernate.annotations.GenericGenerator;
 
+import java.util.Date;
+
 @Entity
 @Table(name = "comments", schema = "PUBLIC", catalog = "DB")
 @Getter
 @Setter
-public class CommetEntity {
+public class CommentEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "comments_sequence")
@@ -22,13 +24,26 @@ public class CommetEntity {
             })
     private Long id;
 
-    @Column(name = "text")
-    private String text;
+    @Column(name = "date")
+    private Date date;
 
-    // todo: связи
-    @Column(name = "user_id")
-    private String userId;
+    @Column(name = "comment")
+    private String comment;
 
-    @Column(name = "film_id")
-    private String filmId;
+    @Column(name = "rating")
+    private Double rating;
+
+    @Column(name = "film_id", insertable = false, updatable = false)
+    private Long filmId;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "film_id", nullable = false)
+    private FilmEntity film;
+
+    @Column(name = "user_id", insertable = false, updatable = false)
+    private Long userId;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "user_id", nullable = false)
+    private UserEntity user;
 }

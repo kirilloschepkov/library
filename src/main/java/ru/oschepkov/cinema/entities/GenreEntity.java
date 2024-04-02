@@ -1,9 +1,11 @@
-package ru.oschepkov.library.entities;
+package ru.oschepkov.cinema.entities;
 
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 import org.hibernate.annotations.GenericGenerator;
+
+import java.util.Set;
 
 @Entity
 @Table(name = "genres", schema = "PUBLIC", catalog = "DB")
@@ -24,4 +26,7 @@ public class GenreEntity {
 
     @Column(name = "name")
     private String name;
+
+    @OneToMany(mappedBy = "genre")
+    private Set<FilmEntity> films;
 }
