@@ -1,24 +1,22 @@
 databaseChangeLog:
   - changeSet:
-      id: create-films-genres-table
+      id: create-favorite-films-table
       author: Kirill
       changes:
         - createTable:
-            tableName: films-genres
+            tableName: favorite-films
             columns:
               - column:
                   name: film_id
                   type: BIGINT
                   constraints:
                     primaryKey: true
-                    nullable: false
-                    foreignKeyName: comment_film_id
+                    foreignKeyName: favorite_film_id
                     references: films(id)
               - column:
-                  name: genre_id
+                  name: user_id
                   type: BIGINT
                   constraints:
                     primaryKey: true
-                    nullable: false
-                    foreignKeyName: comment_genre_id
-                    references: genres(id)
+                    foreignKeyName: liked_user_id
+                    references: users(id)

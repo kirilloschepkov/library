@@ -1,0 +1,88 @@
+databaseChangeLog:
+  - changeSet:
+        id: create-films-sequence
+        author: Kirill
+        changes:
+          - createSequence:
+              sequenceName: films_sequence
+  - changeSet:
+      id: create-films-table
+      author: Kirill
+      changes:
+        - createTable:
+            tableName: films
+            columns:
+              - column:
+                  name: id
+                  type: BIGINT
+                  constraints:
+                    primaryKey: true
+              - column:
+                  name: name
+                  type: varchar(225)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: poster_image
+                  type: varchar(225)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: background_image
+                  type: varchar(225)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: background_color
+                  type: varchar(7)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: video_link
+                  type: varchar(225)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: description
+                  type: varchar
+                  constraints:
+                    nullable: false
+              - column:
+                  name: rating
+                  type: DOUBLE
+                  constraints:
+                    nullable: false
+              - column:
+                  name: scores_count
+                  type: INT
+                  constraints:
+                    nullable: false
+              - column:
+                  name: director
+                  type: varchar(225)
+                  constraints:
+                    nullable: false
+#              - column: # todo: добавить связь
+#                  name: starring_id
+#                  type: BIGINT
+#                  constraints:
+#                    nullable: false
+#                    foreignKeyName: starring_id
+#                    references: starring(id)
+              - column:
+                  name: run_time
+                  type: INT
+                  constraints:
+                    nullable: false
+              - column:
+                  name: released
+                  type: varchar(225)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: genre_id
+                  type: BIGINT
+                  constraints:
+                    nullable: false
+                    foreignKeyName: genre_id
+                    references: genres(id)

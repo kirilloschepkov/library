@@ -5,7 +5,6 @@ import lombok.Getter;
 import lombok.Setter;
 import org.hibernate.annotations.GenericGenerator;
 
-import java.util.List;
 import java.util.Set;
 
 @Entity
@@ -53,8 +52,8 @@ public class FilmEntity {
     @Column(name= "director")
     private String director;
 
-    @Column(name = "starring")
-    private List<String> starring; // todo: массив
+//    @Column(name = "starring")
+//    private List<String> starring; // todo: массив
 
     @Column(name = "run_time")
     private Integer runTime;
@@ -70,7 +69,7 @@ public class FilmEntity {
     private String released;
 
     @OneToMany(mappedBy = "film")
-    private List<CommentEntity> comments;
+    private Set<CommentEntity> comments;
 
     @ManyToMany(fetch = FetchType.LAZY)
     @JoinTable(name = "favorite_films",

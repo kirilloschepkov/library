@@ -38,3 +38,16 @@ databaseChangeLog:
               - column:
                   name: name
                   value: "Action"
+  - changeSet:
+      id: add-genre4
+      author: Kirill
+      changes:
+        - insert:
+            tableName: genres
+            columns:
+              - column:
+                  name: id
+                  valueSequenceNext: genres_sequence
+              - column:
+                  name: name
+                  value: "Fantasy"

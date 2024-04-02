@@ -1,16 +1,16 @@
 databaseChangeLog:
   - changeSet:
-        id: create-films-sequence
-        author: Kirill
-        changes:
-          - createSequence:
-              sequenceName: films_sequence
+      id: create-starring-sequence
+      author: Kirill
+      changes:
+        - createSequence:
+            sequenceName: starring_sequence
   - changeSet:
-      id: create-films-table
+      id: create-starring-table
       author: Kirill
       changes:
         - createTable:
-            tableName: films
+            tableName: starring
             columns:
               - column:
                   name: id
@@ -18,12 +18,12 @@ databaseChangeLog:
                   constraints:
                     primaryKey: true
               - column:
-                  name: name
+                  name: first_name
                   type: varchar(225)
                   constraints:
                     nullable: false
               - column:
-                  name: rating
-                  type: DOUBLE
+                  name: last_name
+                  type: varchar(225)
                   constraints:
                     nullable: false

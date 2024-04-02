@@ -6,7 +6,6 @@ import ru.oschepkov.cinema.entities.CommentEntity;
 import ru.oschepkov.cinema.entities.GenreEntity;
 import ru.oschepkov.cinema.entities.UserEntity;
 
-import java.util.List;
 import java.util.Set;
 
 @Getter
@@ -22,7 +21,7 @@ public class FilmDTO {
     private Double rating;
     private Integer scoresCount;
     private String director;
-    private List<String> starring; // todo: массив
+//    private List<String> starring;
     private Integer runTime;
     private GenreEntity genre;
     private String released;

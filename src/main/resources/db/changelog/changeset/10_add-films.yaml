@@ -1,0 +1,394 @@
+databaseChangeLog:
+  - changeSet:
+      id: add-film1
+      author: Kirill
+      changes:
+        - insert:
+            tableName: films
+            columns:
+              - column:
+                  name: id
+                  valueSequenceNext: films_sequence
+              - column:
+                  name: name
+                  value: "Fantastic Beasts: The Crimes of Grindelwald"
+              - column:
+                  name: poster_image
+                  value: "https://13.design.htmlacademy.pro/static/film/poster/Fantastic_Beasts.jpg"
+              - column:
+                  name: background_image
+                  value: "https://13.design.htmlacademy.pro/static/film/background/Fantastic_Beasts.jpg"
+              - column:
+                  name: background_color
+                  value: "#B6A99F"
+              - column:
+                  name: video_link
+                  value: "https://13.design.htmlacademy.pro/static/film/video/matrix.mp4"
+              - column:
+                  name: description
+                  value: "In an effort to thwart Grindelwald's plans of raising pure-blood wizards to rule over all non-magical beings, Albus Dumbledore enlists his former student Newt Scamander, who agrees to help, though he's unaware of the dangers that lie ahead. Lines are drawn as love and loyalty are tested, even among the truest friends and family, in an increasingly divided wizarding world."
+              - column:
+                  name: rating
+                  value: 3.4
+              - column:
+                  name: scores_count
+                  value: 160757
+              - column:
+                  name: director
+                  value: "David Yates"
+#              - column:
+#                  name: starring
+#                  value: ["Eddie Redmayne", "Katherine Waterston", "Dan Fogler" ]
+              - column:
+                  name: run_time
+                  value: 134
+              - column:
+                  name: released
+                  value: 2018
+              - column:
+                  name: genre_id
+                  value: 4
+  - changeSet:
+      id: add-film2
+      author: Kirill
+      changes:
+        - insert:
+            tableName: films
+            columns:
+              - column:
+                  name: id
+                  valueSequenceNext: films_sequence
+              - column:
+                  name: name
+                  value: Bohemian Rhapsody
+              - column:
+                  name: poster_image
+                  value: "https://13.design.htmlacademy.pro/static/film/poster/Bohemian_Rhapsody.jpg"
+              - column:
+                  name: background_image
+                  value: "https://13.design.htmlacademy.pro/static/film/background/Bohemian_Rhapsody.jpg"
+              - column:
+                  name: background_color
+                  value: "#929FA5"
+              - column:
+                  name: video_link
+                  value: "https://13.design.htmlacademy.pro/static/film/video/matrix.mp4"
+              - column:
+                  name: description
+                  value: "Bohemian Rhapsody is a foot-stomping celebration of Queen, their music and their extraordinary lead singer Freddie Mercury. Freddie defied stereotypes and shattered convention to become one of the most beloved entertainers on the planet. The film traces the meteoric rise of the band through their iconic songs and revolutionary sound. They reach unparalleled success, but in an unexpected turn Freddie, surrounded by darker influences, shuns Queen in pursuit of his solo career. Having suffered greatly without the collaboration of Queen, Freddie manages to reunite with his bandmates just in time for Live Aid. While bravely facing a recent AIDS diagnosis, Freddie leads the band in one of the greatest performances in the history of rock music. Queen cements a legacy that continues to inspire outsiders, dreamers and music lovers to this day."
+              - column:
+                  name: rating
+                  value: 6.1
+              - column:
+                  name: scores_count
+                  value: 338903
+              - column:
+                  name: director
+                  value: "Bryan Singer"
+#              - column:
+#                  name: starring
+#                  value: ["Rami Malek", "Lucy Boynton", "Gwilym Lee"]
+              - column:
+                  name: run_time
+                  value: 134
+              - column:
+                  name: released
+                  value: 2018
+              - column:
+                  name: genre_id
+                  value: 2
+  - changeSet:
+      id: add-film3
+      author: Kirill
+      changes:
+        - insert:
+            tableName: films
+            columns:
+              - column:
+                  name: id
+                  valueSequenceNext: films_sequence
+              - column:
+                  name: name
+                  value: Macbeth
+              - column:
+                  name: poster_image
+                  value: "https://13.design.htmlacademy.pro/static/film/poster/Macbeth.jpg"
+              - column:
+                  name: background_image
+                  value: "https://13.design.htmlacademy.pro/static/film/background/Macbeth.jpg"
+              - column:
+                  name: background_color
+                  value: "#F1E9CE"
+              - column:
+                  name: video_link
+                  value: "https://13.design.htmlacademy.pro/static/film/video/matrix.mp4"
+              - column:
+                  name: description
+                  value: "Macbeth, the Thane of Glamis, receives a prophecy from a trio of witches that one day he will become King of Scotland. Consumed by ambition and spurred to action by his wife, Macbeth murders his king and takes the throne for himself."
+              - column:
+                  name: rating
+                  value: 3.3
+              - column:
+                  name: scores_count
+                  value: 48798
+              - column:
+                  name: director
+                  value: "Justin Kurzel"
+#              - column:
+#                  name: starring
+#                  value: ["Michael Fassbender", "Marion Cotillard", "Jack Madigan"]
+              - column:
+                  name: run_time
+                  value: 113
+              - column:
+                  name: released
+                  value: 2015
+              - column:
+                  name: genre_id
+                  value: 2
+  - changeSet:
+      id: add-film4
+      author: Kirill
+      changes:
+        - insert:
+            tableName: films
+            columns:
+              - column:
+                  name: id
+                  valueSequenceNext: films_sequence
+              - column:
+                  name: name
+                  value: "Aviator"
+              - column:
+                  name: poster_image
+                  value: "https://13.design.htmlacademy.pro/static/film/poster/Aviator.jpg"
+              - column:
+                  name: background_image
+                  value: "https://13.design.htmlacademy.pro/static/film/background/Aviator.jpg"
+              - column:
+                  name: background_color
+                  value: "#D6CDAF"
+              - column:
+                  name: video_link
+                  value: "https://13.design.htmlacademy.pro/static/film/video/bubbles.mp4"
+              - column:
+                  name: description
+                  value: "A biopic depicting the early years of legendary Director and aviator Howard Hughes' career from the late 1920s to the mid 1940s."
+              - column:
+                  name: rating
+                  value: 9.8
+              - column:
+                  name: scores_count
+                  value: 307174
+              - column:
+                  name: director
+                  value: "Martin Scorsese"
+#              - column:
+#                  name: starring
+#                  value: ["Leonardo DiCaprio", "Cate Blanchett", "Kate Beckinsale"]
+              - column:
+                  name: run_time
+                  value: 170
+              - column:
+                  name: released
+                  value: 2014
+              - column:
+                  name: genre_id
+                  value: 2
+  - changeSet:
+      id: add-film5
+      author: Kirill
+      changes:
+        - insert:
+            tableName: films
+            columns:
+              - column:
+                  name: id
+                  valueSequenceNext: films_sequence
+              - column:
+                  name: name
+                  value: "We need to talk about Kevin"
+              - column:
+                  name: poster_image
+                  value: "https://13.design.htmlacademy.pro/static/film/poster/We_need_to_talk_about_Kevin.jpg"
+              - column:
+                  name: background_image
+                  value: "https://13.design.htmlacademy.pro/static/film/background/We_need_to_talk_about_Kevin.jpg"
+              - column:
+                  name: background_color
+                  value: "#E1DFDE"
+              - column:
+                  name: video_link
+                  value: "https://13.design.htmlacademy.pro/static/film/video/bubbles.mp4"
+              - column:
+                  name: description
+                  value: "Kevin's mother struggles to love her strange child, despite the increasingly dangerous things he says and does as he grows up. But Kevin is just getting started, and his final act will be beyond anything anyone imagined."
+              - column:
+                  name: rating
+                  value: 3.8
+              - column:
+                  name: scores_count
+                  value: 123240
+              - column:
+                  name: director
+                  value: "Lynne Ramsay"
+#              - column:
+#                  name: starring
+#                  value: ["Tilda Swinton", "John C. Reilly", "Ezra Miller"]
+              - column:
+                  name: run_time
+                  value: 112
+              - column:
+                  name: released
+                  value: 2011
+              - column:
+                  name: genre_id
+                  value: 2
+  - changeSet:
+      id: add-film6
+      author: Kirill
+      changes:
+        - insert:
+            tableName: films
+            columns:
+              - column:
+                  name: id
+                  valueSequenceNext: films_sequence
+              - column:
+                  name: name
+                  value: "What We Do in the Shadows"
+              - column:
+                  name: poster_image
+                  value: "https://13.design.htmlacademy.pro/static/film/poster/What-We-Do-in-the-Shadows.jpg"
+              - column:
+                  name: background_image
+                  value: "https://13.design.htmlacademy.pro/static/film/background/What-We-Do-in-the-Shadows.jpg"
+              - column:
+                  name: background_color
+                  value: "#A39E81"
+              - column:
+                  name: video_link
+                  value: "https://13.design.htmlacademy.pro/static/film/video/matrix.mp4"
+              - column:
+                  name: description
+                  value: "A look into the daily (or rather, nightly) lives of three vampires who've lived together for over 100 years, in Staten Island."
+              - column:
+                  name: rating
+                  value: 7.2
+              - column:
+                  name: scores_count
+                  value: 6173
+              - column:
+                  name: director
+                  value: "Jemaine Clement"
+#              - column:
+#                  name: starring
+#                  value: ["Kayvan Novak", "Matt Berry", "Natasia Demetriou"]
+              - column:
+                  name: run_time
+                  value: 30
+              - column:
+                  name: released
+                  value: 2019
+              - column:
+                  name: genre_id
+                  value: 1
+  - changeSet:
+      id: add-film7
+      author: Kirill
+      changes:
+        - insert:
+            tableName: films
+            columns:
+              - column:
+                  name: id
+                  valueSequenceNext: films_sequence
+              - column:
+                  name: name
+                  value: "The Revenant"
+              - column:
+                  name: poster_image
+                  value: "https://13.design.htmlacademy.pro/static/film/poster/Revenant.jpg"
+              - column:
+                  name: background_image
+                  value: "https://13.design.htmlacademy.pro/static/film/background/Revenant.jpg"
+              - column:
+                  name: background_color
+                  value: "#92918B"
+              - column:
+                  name: video_link
+                  value: "https://13.design.htmlacademy.pro/static/film/video/bubbles.mp4"
+              - column:
+                  name: description
+                  value: "A frontiersman on a fur trading expedition in the 1820s fights for survival after being mauled by a bear and left for dead by members of his own hunting team."
+              - column:
+                  name: rating
+                  value: 4
+              - column:
+                  name: scores_count
+                  value: 618498
+              - column:
+                  name: director
+                  value: "Alejandro G. Iñárritu"
+#              - column:
+#                  name: starring
+#                  value: ["Leonardo DiCaprio", "Tom Hardy", "Will Poulter"]
+              - column:
+                  name: run_time
+                  value: 156
+              - column:
+                  name: released
+                  value: 2015
+              - column:
+                  name: genre_id
+                  value: 3
+
+#  - changeSet:
+#      id: add-film1
+#      author: Kirill
+#      changes:
+#        - insert:
+#            tableName: films
+#            columns:
+#              - column:
+#                  name: id
+#                  valueSequenceNext: films_sequence
+#              - column:
+#                  name: name
+#                  value:
+#              - column:
+#                  name: poster_image
+#                  value:
+#              - column:
+#                  name: background_image
+#                  value:
+#              - column:
+#                  name: background_color
+#                  value:
+#              - column:
+#                  name: video_link
+#                  value:
+#              - column:
+#                  name: description
+#                  value:
+#              - column:
+#                  name: rating
+#                  value:
+#              - column:
+#                  name: scores_count
+#                  value:
+#              - column:
+#                  name: director
+#                  value:
+#              - column:
+#                  name: starring
+#                  value:
+#              - column:
+#                  name: run_time
+#                  value:
+#              - column:
+#                  name: released
+#                  value:
+#              - column:
+#                  name: genre_id
+#                  value:

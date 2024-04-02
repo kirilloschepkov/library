@@ -32,3 +32,8 @@ databaseChangeLog:
                   type: varchar(225)
                   constraints:
                     nullable: false
+              - column:
+                  name: token
+                  type: varchar(225)
+                  constraints:
+                    nullable: false
