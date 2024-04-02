@@ -18,15 +18,15 @@ public class CommentService {
         return repository.findAll();
     }
 
-    public List<CommentEntity> getCommentsByFilmId(){
-        return null;
+    public List<CommentEntity> getCommentsByFilmId(Long id){
+        return null; // todo: комментарии по идентификатору фильма
     }
 
-    public CommentEntity create(CommentEntity comment){
+    public CommentEntity getCommentsById(Long id){
+        return repository.findById(id).orElse(null);
+    }
+
+    public CommentEntity createComment(CommentEntity comment){
         return repository.save(comment);
-    }
-
-    public void delete(Long id) {
-        repository.deleteById(id);
     }
 }
