@@ -35,9 +35,9 @@ public class FilmController {
             summary = "Получить фильм",
             description = "Возвращает фильм с идентификатором id."
     )
-    @GetMapping("/{id}")
-    public FilmEntity getFilmById(@PathVariable Long id) {
-        return service.getFilmById(id);
+    @GetMapping("/{filmId}")
+    public FilmEntity getFilmById(@PathVariable Long filmId) {
+        return service.getFilmById(filmId);
     }
 
 
@@ -45,9 +45,9 @@ public class FilmController {
             summary = "Получить список похожих фильмов",
             description = "Возвращает массив фильмов с тем же жанром, что и фильм с идентификатором id"
     )
-    @GetMapping("/{id}/similar")
-    public FilmEntity getSimilarFilm(@PathVariable Long id) {
-        return null; // todo: схожие фильмы
+    @GetMapping("/{filmId}/similar")
+    public List<FilmEntity> getSimilarFilm(@PathVariable Long filmId) {
+        return service.getSimilarFilmById(filmId);
     }
 
 
@@ -65,9 +65,9 @@ public class FilmController {
             summary = "Изменить фильм",
             description = "Изменяет фильм с идентификатором id на переданный в теле запроса"
     )
-    @PutMapping("/{id}")
-    public FilmEntity updateFilm(@PathVariable Long id, @RequestBody FilmEntity film) {
-        film.setId(id);
+    @PutMapping("/{filmId}")
+    public FilmEntity updateFilm(@PathVariable Long filmId, @RequestBody FilmEntity film) {
+        film.setId(filmId);
         return service.updateFilm(film);
     }
 
@@ -75,8 +75,8 @@ public class FilmController {
             summary = "Удалить фильм",
             description = "Удаляет фильм с идентификатором id из базы данных"
     )
-    @DeleteMapping("/{id}")
-    public void deleteFilm(@PathVariable Long id) {
-        service.deleteFilmById(id);
+    @DeleteMapping("/{filmId}")
+    public void deleteFilm(@PathVariable Long filmId) {
+        service.deleteFilmById(filmId);
     }
 }

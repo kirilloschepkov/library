@@ -35,9 +35,9 @@ public class CommentController {
             summary = "Получить комментарий",
             description = "Возвращает комментарий с идентификатором id."
     )
-    @GetMapping("/{id}")
-    public CommentEntity getCommentById(@PathVariable Long id) {
-        return service.getCommentsById(id);
+    @GetMapping("/{commentId}")
+    public CommentEntity getCommentById(@PathVariable Long commentId) {
+        return service.getCommentsById(commentId);
     }
 
 

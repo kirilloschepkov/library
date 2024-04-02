@@ -33,18 +33,18 @@ public class UserController {
             summary = "Получить пользователя по идентификатору",
             description = "Возвращает пользователя с идентификатором id."
     )
-    @GetMapping("/{id}")
-    public UserEntity getUserById(@PathVariable Long id) {
-        return service.getUserById(id);
+    @GetMapping("/{userId}")
+    public UserEntity getUserById(@PathVariable Long userId) {
+        return service.getUserById(userId);
     }
 
     @Operation(
             summary = "Получить пользователя по токену",
             description = "Возвращает пользователя с токеном token."
     )
-    @GetMapping("/{token}")
-    public UserEntity getUserByToken(@PathVariable String token) {
-        return service.getUserByToken(token);
+    @GetMapping("/{userToken}")
+    public UserEntity getUserByToken(@PathVariable String userToken) {
+        return service.getUserByToken(userToken);
     }
 
     @Operation(
@@ -61,9 +61,9 @@ public class UserController {
             summary = "Изменить пользователя",
             description = "Изменяет данные пользователя с идентификатором id."
     )
-    @PutMapping("/{id}")
-    public UserEntity updateFilm(@PathVariable Long id, @RequestBody UserEntity user) {
-        user.setId(id);
+    @PutMapping("/{userId}")
+    public UserEntity updateFilm(@PathVariable Long userId, @RequestBody UserEntity user) {
+        user.setId(userId);
         return service.updateUser(user);
     }
 
@@ -71,8 +71,8 @@ public class UserController {
             summary = "Удалять пользователя",
             description = "Удаляет пользователя с идентификатором id."
     )
-    @DeleteMapping("/{id}")
-    public void deleteUser(@PathVariable Long id) {
-        service.deleteUserById(id);
+    @DeleteMapping("/{userId}")
+    public void deleteUser(@PathVariable Long userId) {
+        service.deleteUserById(userId);
     }
 }

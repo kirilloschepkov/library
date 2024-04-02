@@ -26,6 +26,11 @@ public class FilmService {
     }
 
 
+    public List<FilmEntity> getSimilarFilmById(Long id) {
+        return null; // todo: похожие фильмы
+    }
+
+
     public FilmEntity createFilm(FilmEntity film) {
         return repository.save(film);
     }
