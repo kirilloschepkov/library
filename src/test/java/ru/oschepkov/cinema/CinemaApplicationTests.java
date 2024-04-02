@@ -1,10 +1,10 @@
-package ru.oschepkov.library;
+package ru.oschepkov.cinema;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class LibraryApplicationTests {
+class CinemaApplicationTests {
 
     @Test
     void contextLoads() {
