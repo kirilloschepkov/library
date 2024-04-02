@@ -4,7 +4,7 @@ databaseChangeLog:
       author: Kirill
       changes:
         - createTable:
-            tableName: favorite-films
+            tableName: favorite_films
             columns:
               - column:
                   name: film_id

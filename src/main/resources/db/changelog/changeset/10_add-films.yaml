@@ -60,7 +60,7 @@ databaseChangeLog:
                   valueSequenceNext: films_sequence
               - column:
                   name: name
-                  value: Bohemian Rhapsody
+                  value: "Bohemian Rhapsody"
               - column:
                   name: poster_image
                   value: "https://13.design.htmlacademy.pro/static/film/poster/Bohemian_Rhapsody.jpg"
@@ -109,7 +109,7 @@ databaseChangeLog:
                   valueSequenceNext: films_sequence
               - column:
                   name: name
-                  value: Macbeth
+                  value: "Macbeth"
               - column:
                   name: poster_image
                   value: "https://13.design.htmlacademy.pro/static/film/poster/Macbeth.jpg"
