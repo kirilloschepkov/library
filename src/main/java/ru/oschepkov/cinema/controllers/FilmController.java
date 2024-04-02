@@ -22,7 +22,7 @@ public class FilmController {
 
 
     @Operation(
-            summary = "Получить список фильмов",
+            summary = "Получить все фильмы",
             description = "Возвращает массив фильмов. Каждый фильм описан в виде объекта."
     )
     @GetMapping
