@@ -17,7 +17,7 @@ import java.util.List;
 @RequiredArgsConstructor
 public class FilmController {
     private final FilmService service;
-    private final FilmMapper filmMapper;
+    private final FilmMapper mapper;
 
     @Operation(
             summary = "Получить все фильмы",
@@ -28,7 +28,7 @@ public class FilmController {
         return service
                 .getAllFilms()
                 .stream()
-                .map(filmMapper::convertFromEntity)
+                .map(mapper::convertFromEntity)
                 .toList();
     }
 
@@ -39,7 +39,7 @@ public class FilmController {
     )
     @GetMapping("/{filmId}")
     public FilmDTO getFilmById(@PathVariable Long filmId) {
-        return filmMapper.convertFromEntity(service.getFilmById(filmId)); // todo: обработка запроса отсутствующего фильма
+        return mapper.convertFromEntity(service.getFilmById(filmId)); // todo: обработка запроса отсутствующего фильма
     }
 
 
@@ -52,7 +52,7 @@ public class FilmController {
         return service
                 .getSimilarFilmById(filmId)
                 .stream()
-                .map(filmMapper::convertFromEntity)
+                .map(mapper::convertFromEntity)
                 .toList();
     }
 
@@ -63,7 +63,7 @@ public class FilmController {
     )
     @PostMapping
     public FilmDTO createFilm(@RequestBody FilmEntity film) {
-        return filmMapper.convertFromEntity(service.createFilm(film));
+        return mapper.convertFromEntity(service.createFilm(film));
     }
 
 
@@ -75,7 +75,7 @@ public class FilmController {
     public FilmDTO updateFilm(@PathVariable Long filmId, @RequestBody FilmEntity film) { // todo: схема для добавления фильма
         film.setId(filmId);
         FilmEntity updatedFilm = service.updateFilm(film);
-        return filmMapper.convertFromEntity(updatedFilm);
+        return mapper.convertFromEntity(updatedFilm);
     }
 
     @Operation(

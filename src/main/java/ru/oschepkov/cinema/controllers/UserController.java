@@ -2,9 +2,11 @@ package ru.oschepkov.cinema.controllers;
 
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
+import ru.oschepkov.cinema.dto.UserDTO;
 import ru.oschepkov.cinema.entities.UserEntity;
+import ru.oschepkov.cinema.mappers.UserMapper;
 import ru.oschepkov.cinema.services.UserService;
 
 import java.util.List;
@@ -12,21 +14,22 @@ import java.util.List;
 @Tag(name = "Пользователи")
 @RestController
 @RequestMapping("/users")
+@RequiredArgsConstructor
 public class UserController {
     private final UserService service;
-
-    @Autowired
-    public UserController(UserService service) {
-        this.service = service;
-    }
+    private final UserMapper mapper;
 
     @Operation(
             summary = "Получить всех пользователей",
             description = "Возвращает список из всех пользователей"
     )
     @GetMapping
-    public List<UserEntity> getAllUsers() {
-        return service.getAllUsers();
+    public List<UserDTO> getAllUsers() {
+        return service
+                .getAllUsers()
+                .stream()
+                .map(mapper::convertFromEntity)
+                .toList();
     }
 
     @Operation(
@@ -34,8 +37,8 @@ public class UserController {
             description = "Возвращает пользователя с идентификатором id."
     )
     @GetMapping("/{userId}")
-    public UserEntity getUserById(@PathVariable Long userId) {
-        return service.getUserById(userId);
+    public UserDTO getUserById(@PathVariable Long userId) {
+        return mapper.convertFromEntity(service.getUserById(userId));
     }
 
     @Operation(
@@ -43,8 +46,8 @@ public class UserController {
             description = "Возвращает пользователя с токеном token."
     )
     @GetMapping("/{userToken}")
-    public UserEntity getUserByToken(@PathVariable String userToken) {
-        return service.getUserByToken(userToken);
+    public UserDTO getUserByToken(@PathVariable String userToken) {
+        return mapper.convertFromEntity(service.getUserByToken(userToken));
     }
 
     @Operation(
@@ -52,8 +55,8 @@ public class UserController {
             description = "Создает нового пользователя."
     )
     @PostMapping
-    public UserEntity createUser(@RequestBody UserEntity user) {
-        return service.createUser(user);
+    public UserDTO createUser(@RequestBody UserEntity user) {
+        return mapper.convertFromEntity(service.createUser(user));
     }
 
 
@@ -62,9 +65,10 @@ public class UserController {
             description = "Изменяет данные пользователя с идентификатором id."
     )
     @PutMapping("/{userId}")
-    public UserEntity updateFilm(@PathVariable Long userId, @RequestBody UserEntity user) {
+    public UserDTO updateFilm(@PathVariable Long userId, @RequestBody UserEntity user) {
         user.setId(userId);
-        return service.updateUser(user);
+        UserEntity updatedUser = service.updateUser(user);
+        return mapper.convertFromEntity(updatedUser);
     }
 
     @Operation(

@@ -5,7 +5,4 @@ import org.springframework.stereotype.Repository;
 import ru.oschepkov.cinema.entities.UserEntity;
 
 @Repository
-public interface UserRepository extends JpaRepository<UserEntity, Long> {
-
-}
-
+public interface UserRepository extends JpaRepository<UserEntity, Long> {}

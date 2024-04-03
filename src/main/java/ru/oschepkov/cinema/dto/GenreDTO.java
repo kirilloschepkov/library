@@ -1,11 +1,12 @@
 package ru.oschepkov.cinema.dto;
 
-import lombok.Getter;
-import lombok.Setter;
+import lombok.AccessLevel;
+import lombok.Data;
+import lombok.experimental.FieldDefaults;
 
-@Getter
-@Setter
+@Data
+@FieldDefaults(level = AccessLevel.PRIVATE)
 public class GenreDTO {
-    private Long id;
-    private String name;
+    Long id;
+    String name;
 }

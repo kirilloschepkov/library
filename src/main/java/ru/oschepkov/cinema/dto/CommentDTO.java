@@ -1,17 +1,18 @@
 package ru.oschepkov.cinema.dto;
 
-import lombok.Getter;
-import lombok.Setter;
+import lombok.AccessLevel;
+import lombok.Data;
+import lombok.experimental.FieldDefaults;
 
 import java.util.Date;
 
-@Getter
-@Setter
+@Data
+@FieldDefaults(level = AccessLevel.PRIVATE)
 public class CommentDTO {
-    private Long id;
-    private Date date;
-    private String comment;
-    private Double rating;
-    private FilmDTO film;
-    private UserDTO user;
+    Long id;
+    Date date;
+    String comment;
+    Double rating;
+    FilmDTO film;
+    UserDTO user;
 }
