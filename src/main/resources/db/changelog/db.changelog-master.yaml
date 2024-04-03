@@ -1,17 +1,25 @@
 databaseChangeLog:
   - include:
-        file: db/changelog/changeset/create-publishers-table.yaml
+      file: db/changelog/changeset/01_create-users-table.yaml
   - include:
-      file: db/changelog/changeset/create-books-table.yaml
+      file: db/changelog/changeset/02_create-genre-table.yaml
+#  - include:
+#      file: db/changelog/changeset/03_create-starring-table.yaml
   - include:
-      file: db/changelog/changeset/create-authors-table.yaml
+      file: db/changelog/changeset/04_create-films-table.yaml
   - include:
-      file: db/changelog/changeset/create-books-authors-table.yaml
+      file: db/changelog/changeset/05_create-comments-table.yaml
   - include:
-      file: db/changelog/changeset/add-publishers.yaml
+      file: db/changelog/changeset/06_create-favorite-films-table.yaml
   - include:
-      file: db/changelog/changeset/add-authors.yaml
+      file: db/changelog/changeset/07_add-users.yaml
   - include:
-      file: db/changelog/changeset/add-books.yaml
+      file: db/changelog/changeset/08_add-genres.yaml
+#  - include:
+#      file: db/changelog/changeset/09_add-starring.yaml
   - include:
-      file: db/changelog/changeset/add-books-authors.yaml
+      file: db/changelog/changeset/10_add-films.yaml
+  - include:
+      file: db/changelog/changeset/11_add-comments.yaml
+#  - include:
+#      file: db/changelog/changeset/12_add-favorite-films.yaml

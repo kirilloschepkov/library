@@ -1,0 +1,29 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-starring-sequence
+      author: Kirill
+      changes:
+        - createSequence:
+            sequenceName: starring_sequence
+  - changeSet:
+      id: create-starring-table
+      author: Kirill
+      changes:
+        - createTable:
+            tableName: starring
+            columns:
+              - column:
+                  name: id
+                  type: BIGINT
+                  constraints:
+                    primaryKey: true
+              - column:
+                  name: first_name
+                  type: varchar(225)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: last_name
+                  type: varchar(225)
+                  constraints:
+                    nullable: false

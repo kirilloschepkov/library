@@ -1,0 +1,133 @@
+databaseChangeLog:
+  - changeSet:
+      id: add-user1
+      author: Kirill
+      changes:
+        - insert:
+            tableName: users
+            columns:
+              - column:
+                  name: id
+                  valueSequenceNext: users_sequence
+              - column:
+                  name: name
+                  value: "Pavel"
+              - column:
+                  name: avatar_url
+                  value: "https://gravatar.com/avatar/f4712dfa0d64baeead90026a46d5731e?s=200&d=robohash&r=x"
+              - column:
+                  name: email
+                  value: "pavel@email.ru"
+              - column:
+                  name: token
+                  value: "tMj5O0xmWtgy8Lkeurmh1yvod4ZjCOPSSduxAbODchwHRsZzL3scJyK1pcjGyUa2"
+  - changeSet:
+      id: add-user2
+      author: Kirill
+      changes:
+        - insert:
+            tableName: users
+            columns:
+              - column:
+                  name: id
+                  valueSequenceNext: users_sequence
+              - column:
+                  name: name
+                  value: "Alex"
+              - column:
+                  name: avatar_url
+                  value: "https://gravatar.com/avatar/ac955f33a6adf12688eba608cc4a0d6f?s=400&d=robohash&r=x"
+              - column:
+                  name: email
+                  value: "alex@email.ru"
+              - column:
+                  name: token
+                  value: "kzsxcOBcvXeWKko4gGqhoQWXmAqRAVj60XBfVDdBqrDK4RM8EGgrXpEOhPxLVk4y"
+  - changeSet:
+      id: add-user3
+      author: Kirill
+      changes:
+        - insert:
+            tableName: users
+            columns:
+              - column:
+                  name: id
+                  valueSequenceNext: users_sequence
+              - column:
+                  name: name
+                  value: "David"
+              - column:
+                  name: avatar_url
+                  value: "https://gravatar.com/avatar/c0e59081d96ae453f063abc0b7a1e01b?s=400&d=robohash&r=x"
+              - column:
+                  name: email
+                  value: "david@email.ru"
+              - column:
+                  name: token
+                  value: "meyA2Tk0E99sPYmctLOhoii9599XuWyqeb7bWu6ras0brt8Vj7812ZSydlQlqg8f"
+  - changeSet:
+      id: add-user4
+      author: Kirill
+      changes:
+        - insert:
+            tableName: users
+            columns:
+              - column:
+                  name: id
+                  valueSequenceNext: users_sequence
+              - column:
+                  name: name
+                  value: "Polina"
+              - column:
+                  name: avatar_url
+                  value: "https://gravatar.com/avatar/cda5c2ee0420f687b65630c0eea69381?s=400&d=robohash&r=x"
+              - column:
+                  name: email
+                  value: "polina@email.ru"
+              - column:
+                  name: token
+                  value: "jGcF6Tg2XIW31vWc1XLfcF4SdDUeL0x4pZJOFRm91cy9GVZ0uj7UrIWtM4MawcAA"
+  - changeSet:
+      id: add-user5
+      author: Kirill
+      changes:
+        - insert:
+            tableName: users
+            columns:
+              - column:
+                  name: id
+                  valueSequenceNext: users_sequence
+              - column:
+                  name: name
+                  value: "Nastya"
+              - column:
+                  name: avatar_url
+                  value: "https://gravatar.com/avatar/d0ee5cdb56caf6974c0ebd6240da92c2?s=400&d=robohash&r=x"
+              - column:
+                  name: email
+                  value: "nastya@email.ru"
+              - column:
+                  name: token
+                  value: "RYghZqt7uGgxlZ0bAph5zppPFwMKTkW8q8zQrGjas0i41cRRmuAF3i2JSi2loK7f"
+  - changeSet:
+      id: add-user6
+      author: Kirill
+      changes:
+        - insert:
+            tableName: users
+            columns:
+              - column:
+                  name: id
+                  valueSequenceNext: users_sequence
+              - column:
+                  name: name
+                  value: "Dasha"
+              - column:
+                  name: avatar_url
+                  value: "https://gravatar.com/avatar/705127f1521c7a043257e70315ecbeaa?s=400&d=robohash&r=x"
+              - column:
+                  name: email
+                  value: "dasha@email.ru"
+              - column:
+                  name: token
+                  value: "mwhMriQskqxaexLtTkVxHYtGQ9CZ4QpLTr5dzs2HApy2mDc2dycruxogBCP4cUWT"

@@ -1,0 +1,152 @@
+databaseChangeLog:
+  - changeSet:
+      id: add-comment1
+      author: Kirill
+      changes:
+        - insert:
+            tableName: comments
+            columns:
+              - column:
+                  name: id
+                  valueSequenceNext: comments_sequence
+              - column:
+                  name: date
+                  value: "2020-12-12"
+              - column:
+                  name: comment
+                  value: "Discerning travellers and Wes Anderson fans will luxuriate in the glorious Mittel-European kitsch of one of the director's funniest and most exquisitely designed movies in years"
+              - column:
+                  name: rating
+                  value: 7.2
+              - column:
+                  name: user_id
+                  value: 3
+              - column:
+                  name: film_id
+                  value: 2
+  - changeSet:
+      id: add-comment2
+      author: Kirill
+      changes:
+        - insert:
+            tableName: comments
+            columns:
+              - column:
+                  name: id
+                  valueSequenceNext: comments_sequence
+              - column:
+                  name: date
+                  value: "2021-01-01"
+              - column:
+                  name: comment
+                  value: "This movie is perfect in all its categories: credits, sound track, production, casting, writing, photography, editing, acting, and direction. I was amazed with the freedom of the use of the camera."
+              - column:
+                  name: rating
+                  value: 2.7
+              - column:
+                  name: user_id
+                  value: 1
+              - column:
+                  name: film_id
+                  value: 2
+  - changeSet:
+      id: add-comment3
+      author: Kirill
+      changes:
+        - insert:
+            tableName: comments
+            columns:
+              - column:
+                  name: id
+                  valueSequenceNext: comments_sequence
+              - column:
+                  name: date
+                  value: "2009-10-01"
+              - column:
+                  name: comment
+                  value: "A movie that will take you to another world full of emotions."
+              - column:
+                  name: rating
+                  value: 5.9
+              - column:
+                  name: user_id
+                  value: 3
+              - column:
+                  name: film_id
+                  value: 3
+  - changeSet:
+      id: add-comment4
+      author: Kirill
+      changes:
+        - insert:
+            tableName: comments
+            columns:
+              - column:
+                  name: id
+                  valueSequenceNext: comments_sequence
+              - column:
+                  name: date
+                  value: "2024-03-12"
+              - column:
+                  name: comment
+                  value: "This movie will change the way movies are made. Slow-mo, stills, black and white, and color were all used to brilliant effect."
+              - column:
+                  name: rating
+                  value: 5
+              - column:
+                  name: user_id
+                  value: 4
+              - column:
+                  name: film_id
+                  value: 2
+  - changeSet:
+      id: add-comment5
+      author: Kirill
+      changes:
+        - insert:
+            tableName: comments
+            columns:
+              - column:
+                  name: id
+                  valueSequenceNext: comments_sequence
+              - column:
+                  name: date
+                  value: "2024-03-11"
+              - column:
+                  name: comment
+                  value: "Poised to be an instant classic, almost everything about this film is phenomenal - the acting, the cinematography, the discography, etc."
+              - column:
+                  name: rating
+                  value: 9.9
+              - column:
+                  name: user_id
+                  value: 6
+              - column:
+                  name: film_id
+                  value: 3
+
+#  - changeSet:
+#      id: add-comment
+#      author: Kirill
+#      changes:
+#        - insert:
+#            tableName: comments
+#            columns:
+#              - column:
+#                  name: id
+#                  valueSequenceNext: comments_sequence
+#              - column:
+#                  name: date
+#                  value:
+#              - column:
+#                  name: comment
+#                  value: ""
+#              - column:
+#                  name: rating
+#                  value:
+#              - column:
+#                  name: user_id
+#                  value:
+#              - column:
+#                  name: film_id
+#                  value:

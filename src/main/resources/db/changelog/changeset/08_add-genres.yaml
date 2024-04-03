@@ -1,0 +1,53 @@
+databaseChangeLog:
+  - changeSet:
+      id: add-genre1
+      author: Kirill
+      changes:
+        - insert:
+            tableName: genres
+            columns:
+              - column:
+                  name: id
+                  valueSequenceNext: genres_sequence
+              - column:
+                  name: name
+                  value: "Comedy"
+  - changeSet:
+      id: add-genre2
+      author: Kirill
+      changes:
+        - insert:
+            tableName: genres
+            columns:
+              - column:
+                  name: id
+                  valueSequenceNext: genres_sequence
+              - column:
+                  name: name
+                  value: "Drama"
+  - changeSet:
+      id: add-genre3
+      author: Kirill
+      changes:
+        - insert:
+            tableName: genres
+            columns:
+              - column:
+                  name: id
+                  valueSequenceNext: genres_sequence
+              - column:
+                  name: name
+                  value: "Action"
+  - changeSet:
+      id: add-genre4
+      author: Kirill
+      changes:
+        - insert:
+            tableName: genres
+            columns:
+              - column:
+                  name: id
+                  valueSequenceNext: genres_sequence
+              - column:
+                  name: name
+                  value: "Fantasy"

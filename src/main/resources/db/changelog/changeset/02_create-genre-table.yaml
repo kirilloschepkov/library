@@ -1,0 +1,24 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-genres-sequence
+      author: Kirill
+      changes:
+        - createSequence:
+            sequenceName: genres_sequence
+  - changeSet:
+      id: create-genres-table
+      author: Kirill
+      changes:
+        - createTable:
+            tableName: genres
+            columns:
+              - column:
+                  name: id
+                  type: BIGINT
+                  constraints:
+                    primaryKey: true
+              - column:
+                  name: name
+                  type: varchar(225)
+                  constraints:
+                    nullable: false

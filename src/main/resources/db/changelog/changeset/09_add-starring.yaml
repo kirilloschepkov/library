@@ -1,0 +1,51 @@
+databaseChangeLog:
+  - changeSet:
+      id: add-starring1
+      author: Kirill
+      changes:
+        - insert:
+            tableName: starring
+            columns:
+              - column:
+                  name: id
+                  valueSequenceNext: starring_sequence
+              - column:
+                  name: first_name
+                  value: "Comedy"
+              - column:
+                  name: last_name
+                  value: "Comedy"
+  - changeSet:
+      id: add-starring
+      author: Kirill
+      changes:
+        - insert:
+            tableName: starring
+            columns:
+              - column:
+                  name: id
+                  valueSequenceNext: starring_sequence
+              - column:
+                  name: first_name
+                  value: ""
+              - column:
+                  name: last_name
+                  value: ""
+
+
+#  - changeSet:
+#      id: add-starring
+#      author: Kirill
+#      changes:
+#        - insert:
+#            tableName: starring
+#            columns:
+#              - column:
+#                  name: id
+#                  valueSequenceNext: starring_sequence
+#              - column:
+#                  name: first_name
+#                  value: ""
+#              - column:
+#                  name: last_name
+#                  value: ""

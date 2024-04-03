@@ -1,0 +1,22 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-favorite-films-table
+      author: Kirill
+      changes:
+        - createTable:
+            tableName: favorite_films
+            columns:
+              - column:
+                  name: film_id
+                  type: BIGINT
+                  constraints:
+                    primaryKey: true
+                    foreignKeyName: favorite_film_id
+                    references: films(id)
+              - column:
+                  name: user_id
+                  type: BIGINT
+                  constraints:
+                    primaryKey: true
+                    foreignKeyName: liked_user_id
+                    references: users(id)
