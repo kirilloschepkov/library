@@ -36,9 +36,6 @@ databaseChangeLog:
               - column:
                   name: director
                   value: "David Yates"
-#              - column:
-#                  name: starring
-#                  value: ["Eddie Redmayne", "Katherine Waterston", "Dan Fogler" ]
               - column:
                   name: run_time
                   value: 134
@@ -85,9 +82,6 @@ databaseChangeLog:
               - column:
                   name: director
                   value: "Bryan Singer"
-#              - column:
-#                  name: starring
-#                  value: ["Rami Malek", "Lucy Boynton", "Gwilym Lee"]
               - column:
                   name: run_time
                   value: 134
@@ -134,9 +128,6 @@ databaseChangeLog:
               - column:
                   name: director
                   value: "Justin Kurzel"
-#              - column:
-#                  name: starring
-#                  value: ["Michael Fassbender", "Marion Cotillard", "Jack Madigan"]
               - column:
                   name: run_time
                   value: 113
@@ -183,9 +174,6 @@ databaseChangeLog:
               - column:
                   name: director
                   value: "Martin Scorsese"
-#              - column:
-#                  name: starring
-#                  value: ["Leonardo DiCaprio", "Cate Blanchett", "Kate Beckinsale"]
               - column:
                   name: run_time
                   value: 170
@@ -232,9 +220,6 @@ databaseChangeLog:
               - column:
                   name: director
                   value: "Lynne Ramsay"
-#              - column:
-#                  name: starring
-#                  value: ["Tilda Swinton", "John C. Reilly", "Ezra Miller"]
               - column:
                   name: run_time
                   value: 112
@@ -281,9 +266,6 @@ databaseChangeLog:
               - column:
                   name: director
                   value: "Jemaine Clement"
-#              - column:
-#                  name: starring
-#                  value: ["Kayvan Novak", "Matt Berry", "Natasia Demetriou"]
               - column:
                   name: run_time
                   value: 30
@@ -330,9 +312,6 @@ databaseChangeLog:
               - column:
                   name: director
                   value: "Alejandro G. Iñárritu"
-#              - column:
-#                  name: starring
-#                  value: ["Leonardo DiCaprio", "Tom Hardy", "Will Poulter"]
               - column:
                   name: run_time
                   value: 156

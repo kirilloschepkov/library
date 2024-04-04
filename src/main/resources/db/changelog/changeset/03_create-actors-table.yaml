@@ -1,16 +1,16 @@
 databaseChangeLog:
   - changeSet:
-      id: create-starring-sequence
+      id: create-actors-sequence
       author: Kirill
       changes:
         - createSequence:
-            sequenceName: starring_sequence
+            sequenceName: actors_sequence
   - changeSet:
-      id: create-starring-table
+      id: create-actors-table
       author: Kirill
       changes:
         - createTable:
-            tableName: starring
+            tableName: actors
             columns:
               - column:
                   name: id

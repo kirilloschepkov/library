@@ -1,22 +1,22 @@
 databaseChangeLog:
   - changeSet:
-      id: create-favorite-films-table
+      id: create-films-actors-table
       author: Kirill
       changes:
         - createTable:
-            tableName: favorite_films
+            tableName: films_actors
             columns:
               - column:
                   name: film_id
                   type: BIGINT
                   constraints:
                     primaryKey: true
-                    foreignKeyName: film_id_by_favorite_film
+                    foreignKeyName: film_id_by_actor
                     references: films(id)
               - column:
-                  name: user_id
+                  name: actor_id
                   type: BIGINT
                   constraints:
                     primaryKey: true
-                    foreignKeyName: user_id_by_favorite_film
-                    references: users(id)
+                    foreignKeyName: actor_id_by_film
+                    references: actors(id)

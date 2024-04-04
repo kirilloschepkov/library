@@ -39,7 +39,9 @@ public class FilmController {
     )
     @GetMapping("/{filmId}")
     public FilmDTO getFilmById(@PathVariable Long filmId) {
-        return mapper.convertFromEntity(service.getFilmById(filmId)); // todo: обработка запроса отсутствующего фильма
+        FilmEntity film = service.getFilmById(filmId);
+
+        return mapper.convertFromEntity(film); // todo: обработка запроса отсутствующего фильма
     }
 
 

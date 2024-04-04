@@ -1,0 +1,339 @@
+databaseChangeLog:
+  - changeSet:
+      id: add-actor1
+      author: Kirill
+      changes:
+        - insert:
+            tableName: actors
+            columns:
+              - column:
+                  name: id
+                  valueSequenceNext: actors_sequence
+              - column:
+                  name: first_name
+                  value: "Eddie"
+              - column:
+                  name: last_name
+                  value: "Redmayne"
+  - changeSet:
+      id: add-actor2
+      author: Kirill
+      changes:
+        - insert:
+            tableName: actors
+            columns:
+              - column:
+                  name: id
+                  valueSequenceNext: actors_sequence
+              - column:
+                  name: first_name
+                  value: "Katherine"
+              - column:
+                  name: last_name
+                  value: "Waterston"
+  - changeSet:
+      id: add-actor3
+      author: Kirill
+      changes:
+        - insert:
+            tableName: actors
+            columns:
+              - column:
+                  name: id
+                  valueSequenceNext: actors_sequence
+              - column:
+                  name: first_name
+                  value: "Dan"
+              - column:
+                  name: last_name
+                  value: "Fogler"
+  - changeSet:
+      id: add-actor4
+      author: Kirill
+      changes:
+        - insert:
+            tableName: actors
+            columns:
+              - column:
+                  name: id
+                  valueSequenceNext: actors_sequence
+              - column:
+                  name: first_name
+                  value: "Rami"
+              - column:
+                  name: last_name
+                  value: "Malek"
+  - changeSet:
+      id: add-actor5
+      author: Kirill
+      changes:
+        - insert:
+            tableName: actors
+            columns:
+              - column:
+                  name: id
+                  valueSequenceNext: actors_sequence
+              - column:
+                  name: first_name
+                  value: "Lucy"
+              - column:
+                  name: last_name
+                  value: "Boynton"
+  - changeSet:
+      id: add-actor6
+      author: Kirill
+      changes:
+        - insert:
+            tableName: actors
+            columns:
+              - column:
+                  name: id
+                  valueSequenceNext: actors_sequence
+              - column:
+                  name: first_name
+                  value: "Gwilym"
+              - column:
+                  name: last_name
+                  value: "Lee"
+  - changeSet:
+      id: add-actor7
+      author: Kirill
+      changes:
+        - insert:
+            tableName: actors
+            columns:
+              - column:
+                  name: id
+                  valueSequenceNext: actors_sequence
+              - column:
+                  name: first_name
+                  value: "Michael"
+              - column:
+                  name: last_name
+                  value: "Fassbender"
+  - changeSet:
+      id: add-actor8
+      author: Kirill
+      changes:
+        - insert:
+            tableName: actors
+            columns:
+              - column:
+                  name: id
+                  valueSequenceNext: actors_sequence
+              - column:
+                  name: first_name
+                  value: "Marion"
+              - column:
+                  name: last_name
+                  value: "Cotillard"
+  - changeSet:
+      id: add-actor9
+      author: Kirill
+      changes:
+        - insert:
+            tableName: actors
+            columns:
+              - column:
+                  name: id
+                  valueSequenceNext: actors_sequence
+              - column:
+                  name: first_name
+                  value: "Jack"
+              - column:
+                  name: last_name
+                  value: "Madigan"
+  - changeSet:
+      id: add-actor10
+      author: Kirill
+      changes:
+        - insert:
+            tableName: actors
+            columns:
+              - column:
+                  name: id
+                  valueSequenceNext: actors_sequence
+              - column:
+                  name: first_name
+                  value: "Leonardo"
+              - column:
+                  name: last_name
+                  value: "DiCaprio"
+  - changeSet:
+      id: add-actor11
+      author: Kirill
+      changes:
+        - insert:
+            tableName: actors
+            columns:
+              - column:
+                  name: id
+                  valueSequenceNext: actors_sequence
+              - column:
+                  name: first_name
+                  value: "Cate"
+              - column:
+                  name: last_name
+                  value: "Blanchett"
+  - changeSet:
+      id: add-actor12
+      author: Kirill
+      changes:
+        - insert:
+            tableName: actors
+            columns:
+              - column:
+                  name: id
+                  valueSequenceNext: actors_sequence
+              - column:
+                  name: first_name
+                  value: "Kate"
+              - column:
+                  name: last_name
+                  value: "Beckinsale"
+  - changeSet:
+      id: add-actor13
+      author: Kirill
+      changes:
+        - insert:
+            tableName: actors
+            columns:
+              - column:
+                  name: id
+                  valueSequenceNext: actors_sequence
+              - column:
+                  name: first_name
+                  value: "Tilda"
+              - column:
+                  name: last_name
+                  value: "Swinton"
+  - changeSet:
+      id: add-actor14
+      author: Kirill
+      changes:
+        - insert:
+            tableName: actors
+            columns:
+              - column:
+                  name: id
+                  valueSequenceNext: actors_sequence
+              - column:
+                  name: first_name
+                  value: "John"
+              - column:
+                  name: last_name
+                  value: "Reilly"
+  - changeSet:
+      id: add-actor15
+      author: Kirill
+      changes:
+        - insert:
+            tableName: actors
+            columns:
+              - column:
+                  name: id
+                  valueSequenceNext: actors_sequence
+              - column:
+                  name: first_name
+                  value: "Ezra"
+              - column:
+                  name: last_name
+                  value: "Miller"
+  - changeSet:
+      id: add-actor16
+      author: Kirill
+      changes:
+        - insert:
+            tableName: actors
+            columns:
+              - column:
+                  name: id
+                  valueSequenceNext: actors_sequence
+              - column:
+                  name: first_name
+                  value: "Kayvan"
+              - column:
+                  name: last_name
+                  value: "Novak"
+  - changeSet:
+      id: add-actor17
+      author: Kirill
+      changes:
+        - insert:
+            tableName: actors
+            columns:
+              - column:
+                  name: id
+                  valueSequenceNext: actors_sequence
+              - column:
+                  name: first_name
+                  value: "Matt"
+              - column:
+                  name: last_name
+                  value: "Berry"
+  - changeSet:
+      id: add-actor18
+      author: Kirill
+      changes:
+        - insert:
+            tableName: actors
+            columns:
+              - column:
+                  name: id
+                  valueSequenceNext: actors_sequence
+              - column:
+                  name: first_name
+                  value: "Natasia"
+              - column:
+                  name: last_name
+                  value: "Demetriou"
+  - changeSet:
+      id: add-actor19
+      author: Kirill
+      changes:
+        - insert:
+            tableName: actors
+            columns:
+              - column:
+                  name: id
+                  valueSequenceNext: actors_sequence
+              - column:
+                  name: first_name
+                  value: "Tom"
+              - column:
+                  name: last_name
+                  value: "Hardy"
+  - changeSet:
+      id: add-actor20
+      author: Kirill
+      changes:
+        - insert:
+            tableName: actors
+            columns:
+              - column:
+                  name: id
+                  valueSequenceNext: actors_sequence
+              - column:
+                  name: first_name
+                  value: "Will"
+              - column:
+                  name: last_name
+                  value: "Poulter"
+
+#  - changeSet:
+#      id: add-actor
+#      author: Kirill
+#      changes:
+#        - insert:
+#            tableName: actors
+#            columns:
+#              - column:
+#                  name: id
+#                  valueSequenceNext: actors_sequence
+#              - column:
+#                  name: first_name
+#                  value: ""
+#              - column:
+#                  name: last_name
+#                  value: ""
+#

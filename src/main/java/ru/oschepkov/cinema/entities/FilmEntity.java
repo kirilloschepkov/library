@@ -52,13 +52,6 @@ public class FilmEntity {
     @Column(name= "director")
     private String director;
 
-//    @ManyToMany(fetch = FetchType.LAZY)
-//    @JoinTable(name = "starring",
-//            joinColumns = @JoinColumn(name = "star_id"),
-//            inverseJoinColumns = @JoinColumn(name = "film_id")
-//    )
-//    private List<String> starring;
-
     @Column(name = "run_time")
     private Integer runTime;
 
@@ -81,6 +74,13 @@ public class FilmEntity {
             inverseJoinColumns = @JoinColumn(name = "film_id")
     )
     private Set<UserEntity> likedUsers;
+
+    @ManyToMany(fetch = FetchType.LAZY)
+    @JoinTable(name = "films_actors",
+            joinColumns = @JoinColumn(name = "actor_id"),
+            inverseJoinColumns = @JoinColumn(name = "film_id")
+    )
+    private Set<ActorEntity> actors;
 }
 
 //todo: каскадность

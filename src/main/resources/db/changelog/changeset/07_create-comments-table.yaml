@@ -37,12 +37,12 @@ databaseChangeLog:
                   type: BIGINT
                   constraints:
                     nullable: false
-                    foreignKeyName: comment_user_id
+                    foreignKeyName: user_id_by_comment
                     references: users(id)
               - column:
                   name: film_id
                   type: BIGINT
                   constraints:
                     nullable: false
-                    foreignKeyName: commet_film_id # todo: что означает foreignKeyName?
+                    foreignKeyName: film_id_by_comment
                     references: films(id)

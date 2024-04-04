@@ -1,0 +1,289 @@
+databaseChangeLog:
+  - changeSet:
+      id: add-film-actor1
+      author: Kirill
+      changes:
+        - insert:
+            tableName: films_actors
+            columns:
+              - column:
+                  name: film_id
+                  value: 1
+              - column:
+                  name: actor_id
+                  value: 1
+  - changeSet:
+      id: add-film-actor2
+      author: Kirill
+      changes:
+        - insert:
+            tableName: films_actors
+            columns:
+              - column:
+                  name: film_id
+                  value: 1
+              - column:
+                  name: actor_id
+                  value: 2
+  - changeSet:
+      id: add-film-actor3
+      author: Kirill
+      changes:
+        - insert:
+            tableName: films_actors
+            columns:
+              - column:
+                  name: film_id
+                  value: 1
+              - column:
+                  name: actor_id
+                  value: 3
+  - changeSet:
+      id: add-film-actor4
+      author: Kirill
+      changes:
+        - insert:
+            tableName: films_actors
+            columns:
+              - column:
+                  name: film_id
+                  value: 2
+              - column:
+                  name: actor_id
+                  value: 4
+  - changeSet:
+      id: add-film-actor5
+      author: Kirill
+      changes:
+        - insert:
+            tableName: films_actors
+            columns:
+              - column:
+                  name: film_id
+                  value: 2
+              - column:
+                  name: actor_id
+                  value: 5
+  - changeSet:
+      id: add-film-actor6
+      author: Kirill
+      changes:
+        - insert:
+            tableName: films_actors
+            columns:
+              - column:
+                  name: film_id
+                  value: 2
+              - column:
+                  name: actor_id
+                  value: 6
+  - changeSet:
+      id: add-film-actor7
+      author: Kirill
+      changes:
+        - insert:
+            tableName: films_actors
+            columns:
+              - column:
+                  name: film_id
+                  value: 3
+              - column:
+                  name: actor_id
+                  value: 7
+  - changeSet:
+      id: add-film-actor8
+      author: Kirill
+      changes:
+        - insert:
+            tableName: films_actors
+            columns:
+              - column:
+                  name: film_id
+                  value: 3
+              - column:
+                  name: actor_id
+                  value: 8
+  - changeSet:
+      id: add-film-actor9
+      author: Kirill
+      changes:
+        - insert:
+            tableName: films_actors
+            columns:
+              - column:
+                  name: film_id
+                  value: 3
+              - column:
+                  name: actor_id
+                  value: 9
+  - changeSet:
+      id: add-film-actor10
+      author: Kirill
+      changes:
+        - insert:
+            tableName: films_actors
+            columns:
+              - column:
+                  name: film_id
+                  value: 4
+              - column:
+                  name: actor_id
+                  value: 10
+  - changeSet:
+      id: add-film-actor11
+      author: Kirill
+      changes:
+        - insert:
+            tableName: films_actors
+            columns:
+              - column:
+                  name: film_id
+                  value: 4
+              - column:
+                  name: actor_id
+                  value: 11
+  - changeSet:
+      id: add-film-actor12
+      author: Kirill
+      changes:
+        - insert:
+            tableName: films_actors
+            columns:
+              - column:
+                  name: film_id
+                  value: 4
+              - column:
+                  name: actor_id
+                  value: 12
+  - changeSet:
+      id: add-film-actor13
+      author: Kirill
+      changes:
+        - insert:
+            tableName: films_actors
+            columns:
+              - column:
+                  name: film_id
+                  value: 5
+              - column:
+                  name: actor_id
+                  value: 13
+  - changeSet:
+      id: add-film-actor14
+      author: Kirill
+      changes:
+        - insert:
+            tableName: films_actors
+            columns:
+              - column:
+                  name: film_id
+                  value: 5
+              - column:
+                  name: actor_id
+                  value: 14
+  - changeSet:
+      id: add-film-actor15
+      author: Kirill
+      changes:
+        - insert:
+            tableName: films_actors
+            columns:
+              - column:
+                  name: film_id
+                  value: 5
+              - column:
+                  name: actor_id
+                  value: 15
+  - changeSet:
+      id: add-film-actor16
+      author: Kirill
+      changes:
+        - insert:
+            tableName: films_actors
+            columns:
+              - column:
+                  name: film_id
+                  value: 6
+              - column:
+                  name: actor_id
+                  value: 16
+  - changeSet:
+      id: add-film-actor17
+      author: Kirill
+      changes:
+        - insert:
+            tableName: films_actors
+            columns:
+              - column:
+                  name: film_id
+                  value: 6
+              - column:
+                  name: actor_id
+                  value: 17
+  - changeSet:
+      id: add-film-actor18
+      author: Kirill
+      changes:
+        - insert:
+            tableName: films_actors
+            columns:
+              - column:
+                  name: film_id
+                  value: 6
+              - column:
+                  name: actor_id
+                  value: 18
+  - changeSet:
+      id: add-film-actor19
+      author: Kirill
+      changes:
+        - insert:
+            tableName: films_actors
+            columns:
+              - column:
+                  name: film_id
+                  value: 7
+              - column:
+                  name: actor_id
+                  value: 10
+  - changeSet:
+      id: add-film-actor20
+      author: Kirill
+      changes:
+        - insert:
+            tableName: films_actors
+            columns:
+              - column:
+                  name: film_id
+                  value: 7
+              - column:
+                  name: actor_id
+                  value: 19
+  - changeSet:
+      id: add-film-actor21
+      author: Kirill
+      changes:
+        - insert:
+            tableName: films_actors
+            columns:
+              - column:
+                  name: film_id
+                  value: 7
+              - column:
+                  name: actor_id
+                  value: 20
+
+
+#  - changeSet:
+#      id: add-film-actor
+#      author: Kirill
+#      changes:
+#        - insert:
+#            tableName: films_actors
+#            columns:
+#              - column:
+#                  name: film_id
+#                  value:
+#              - column:
+#                  name: actor_id
+#                  value:

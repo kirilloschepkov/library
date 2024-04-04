@@ -1,25 +1,29 @@
 databaseChangeLog:
   - include:
-      file: db/changelog/changeset/01_create-users-table.yaml
+      file: db/changelog/changeset/01_create-genre-table.yaml
   - include:
-      file: db/changelog/changeset/02_create-genre-table.yaml
-#  - include:
-#      file: db/changelog/changeset/03_create-starring-table.yaml
+      file: db/changelog/changeset/02_create-films-table.yaml
   - include:
-      file: db/changelog/changeset/04_create-films-table.yaml
+      file: db/changelog/changeset/03_create-actors-table.yaml
   - include:
-      file: db/changelog/changeset/05_create-comments-table.yaml
+      file: db/changelog/changeset/04_create-films-actors-table.yaml
+  - include:
+      file: db/changelog/changeset/05_create-users-table.yaml
   - include:
       file: db/changelog/changeset/06_create-favorite-films-table.yaml
   - include:
-      file: db/changelog/changeset/07_add-users.yaml
+      file: db/changelog/changeset/07_create-comments-table.yaml
   - include:
       file: db/changelog/changeset/08_add-genres.yaml
-#  - include:
-#      file: db/changelog/changeset/09_add-starring.yaml
   - include:
-      file: db/changelog/changeset/10_add-films.yaml
+      file: db/changelog/changeset/09_add-films.yaml
   - include:
-      file: db/changelog/changeset/11_add-comments.yaml
-#  - include:
-#      file: db/changelog/changeset/12_add-favorite-films.yaml
+      file: db/changelog/changeset/10_add-actors.yaml
+  - include:
+      file: db/changelog/changeset/11_add-films-actors.yaml
+  - include:
+      file: db/changelog/changeset/12_add-users.yaml
+  - include:
+      file: db/changelog/changeset/13_add-favorite-films.yaml
+  - include:
+      file: db/changelog/changeset/14_add-comments.yaml

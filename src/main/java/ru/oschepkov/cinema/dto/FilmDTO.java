@@ -4,6 +4,8 @@ import lombok.AccessLevel;
 import lombok.Data;
 import lombok.experimental.FieldDefaults;
 
+import java.util.Set;
+
 @Data
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public class FilmDTO {
@@ -17,8 +19,8 @@ public class FilmDTO {
     Double rating;
     Integer scoresCount;
     String director;
-    // List<String> starring;
     Integer runTime;
     GenreDTO genre;
     String released;
+    Set<ActorDTO> actors;
 }
