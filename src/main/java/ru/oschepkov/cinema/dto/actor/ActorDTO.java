@@ -1,4 +1,4 @@
-package ru.oschepkov.cinema.dto;
+package ru.oschepkov.cinema.dto.actor;
 
 import lombok.AccessLevel;
 import lombok.Data;
@@ -6,7 +6,8 @@ import lombok.experimental.FieldDefaults;
 
 @Data
 @FieldDefaults(level = AccessLevel.PRIVATE)
-public class GenreDTO {
+public class ActorDTO {
     Long id;
-    String name;
+    String first_name;
+    String last_name;
 }

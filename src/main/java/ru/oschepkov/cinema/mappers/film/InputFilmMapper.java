@@ -1,23 +1,19 @@
-package ru.oschepkov.cinema.mappers;
+package ru.oschepkov.cinema.mappers.film;
 
 import lombok.RequiredArgsConstructor;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Component;
-import ru.oschepkov.cinema.dto.FilmDTO;
+import ru.oschepkov.cinema.dto.film.InputFilmDTO;
 import ru.oschepkov.cinema.entities.FilmEntity;
 
 import java.util.Objects;
 
 @Component
 @RequiredArgsConstructor
-public class FilmMapper {
+public class InputFilmMapper {
     private final ModelMapper modelMapper;
 
-    public FilmDTO convertFromEntity(FilmEntity entity) {
-        return Objects.isNull(entity) ? null : modelMapper.map(entity, FilmDTO.class);
-    }
-
-    public FilmEntity convertFromDTO(FilmDTO dto) {
+    public FilmEntity convertFromDTO(InputFilmDTO dto) {
         return Objects.isNull(dto) ? null : modelMapper.map(dto, FilmEntity.class);
     }
 }

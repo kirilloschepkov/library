@@ -1,21 +1,18 @@
 package ru.oschepkov.cinema.entities;
 
 import jakarta.persistence.*;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.Data;
 import org.hibernate.annotations.GenericGenerator;
 
 import java.util.Set;
 
 @Entity
 @Table(name = "films", schema = "PUBLIC", catalog = "DB")
-@Getter
-@Setter
+@Data
 public class FilmEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "films_sequence")
-    // todo: связь? зачем GenericGenerator?
     @GenericGenerator(
             name = "films_sequence",
             strategy = "org.hibernate.id.enhanced.SequenceStyleGenerator",
@@ -83,4 +80,4 @@ public class FilmEntity {
     private Set<ActorEntity> actors;
 }
 
-//todo: каскадность
+// todo: каскадность

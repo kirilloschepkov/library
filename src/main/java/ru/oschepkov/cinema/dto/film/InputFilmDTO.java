@@ -1,4 +1,4 @@
-package ru.oschepkov.cinema.dto;
+package ru.oschepkov.cinema.dto.film;
 
 import lombok.AccessLevel;
 import lombok.Data;
@@ -8,8 +8,7 @@ import java.util.Set;
 
 @Data
 @FieldDefaults(level = AccessLevel.PRIVATE)
-public class FilmDTO {
-    Long id;
+public class InputFilmDTO {
     String name;
     String posterImage;
     String backgroundImage;
@@ -20,7 +19,7 @@ public class FilmDTO {
     Integer scoresCount;
     String director;
     Integer runTime;
-    GenreDTO genre;
+    String genre;
     String released;
-    Set<ActorDTO> actors;
+    Set<String> actors;
 }
