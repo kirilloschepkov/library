@@ -1,10 +1,10 @@
 databaseChangeLog:
   - changeSet:
-        id: create-comments-sequence
-        author: Kirill
-        changes:
-          - createSequence:
-              sequenceName: comments_sequence
+      id: create-comments-sequence
+      author: Kirill
+      changes:
+        - createSequence:
+            sequenceName: comments_sequence
   - changeSet:
       id: create-comments-table
       author: Kirill
