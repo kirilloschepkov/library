@@ -1,9 +1,10 @@
-package ru.oschepkov.cinema.mappers;
+package ru.oschepkov.cinema.mappers.comment;
 
 import lombok.RequiredArgsConstructor;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Component;
-import ru.oschepkov.cinema.dto.CommentDTO;
+import ru.oschepkov.cinema.dto.comment.CommentDTO;
+import ru.oschepkov.cinema.dto.comment.InputCommentDTO;
 import ru.oschepkov.cinema.entities.CommentEntity;
 
 import java.util.Objects;
@@ -13,11 +14,11 @@ import java.util.Objects;
 public class CommentMapper {
     private final ModelMapper modelMapper;
 
-    public CommentDTO convertFromEntity(CommentEntity entity) {
+    public CommentDTO convertToCommentDTOFromEntity(CommentEntity entity) {
         return Objects.isNull(entity) ? null : modelMapper.map(entity, CommentDTO.class);
     }
 
-    public CommentEntity convertFromDTO(CommentDTO dto) {
+    public CommentEntity convertToCommentEntityFromDTO(InputCommentDTO dto) {
         return Objects.isNull(dto) ? null : modelMapper.map(dto, CommentEntity.class);
     }
 }

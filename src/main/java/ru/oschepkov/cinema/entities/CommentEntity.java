@@ -5,7 +5,7 @@ import lombok.Getter;
 import lombok.Setter;
 import org.hibernate.annotations.GenericGenerator;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 @Entity
 @Table(name = "comments", schema = "PUBLIC", catalog = "DB")
@@ -25,7 +25,7 @@ public class CommentEntity {
     private Long id;
 
     @Column(name = "date")
-    private Date date;
+    private LocalDate date;
 
     @Column(name = "comment")
     private String comment;
