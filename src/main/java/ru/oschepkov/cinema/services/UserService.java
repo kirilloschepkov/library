@@ -3,10 +3,9 @@ package ru.oschepkov.cinema.services;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import ru.oschepkov.cinema.dto.user.InputUserDTO;
-import ru.oschepkov.cinema.dto.user.OutputUserDTO;
+import ru.oschepkov.cinema.dto.user.UserDTO;
 import ru.oschepkov.cinema.entities.UserEntity;
-import ru.oschepkov.cinema.mappers.user.InputUserMapper;
-import ru.oschepkov.cinema.mappers.user.OutputUserMapper;
+import ru.oschepkov.cinema.mappers.user.UserMapper;
 import ru.oschepkov.cinema.repositories.UserRepository;
 
 import java.util.List;
@@ -15,40 +14,39 @@ import java.util.List;
 @RequiredArgsConstructor
 public class UserService {
     private final UserRepository repository;
-    private final OutputUserMapper outputUserMapper;
-    private final InputUserMapper inputUserMapper;
+    private final UserMapper userMapper;
 
-    public List<OutputUserDTO> getAllUsers() {
+    public List<UserDTO> getAllUsers() {
         return repository
                 .findAll()
                 .stream()
-                .map(outputUserMapper::convertFromEntity)
+                .map(userMapper::convertToUserDTOFromEntity)
                 .toList();
     }
 
 
-    public OutputUserDTO getUserById(Long id) {
+    public UserDTO getUserById(Long id) {
         UserEntity userEntity = repository.findById(id).orElse(null);
-        return outputUserMapper.convertFromEntity(userEntity);
+        return userMapper.convertToUserDTOFromEntity(userEntity);
     }
 
-    public OutputUserDTO getUserByToken(String token) {
+    public UserDTO getUserByToken(String token) {
         UserEntity userEntity = repository.findUserEntitiesByToken(token);
-        return outputUserMapper.convertFromEntity(userEntity);
+        return userMapper.convertToUserDTOFromEntity(userEntity);
     }
 
-    public OutputUserDTO createUser(InputUserDTO user) {
-        UserEntity userEntity = inputUserMapper.convertFromDTO(user);
+    public UserDTO createUser(InputUserDTO user) {
+        UserEntity userEntity = userMapper.convertToUserEntityFromDTO(user);
         UserEntity savedUserEntity = repository.save(userEntity);
-        return outputUserMapper.convertFromEntity(savedUserEntity);
+        return userMapper.convertToUserDTOFromEntity(savedUserEntity);
     }
 
 
-    public OutputUserDTO updateUserById(Long id, InputUserDTO user) {
-        UserEntity userEntity = inputUserMapper.convertFromDTO(user);
+    public UserDTO updateUserById(Long id, InputUserDTO user) {
+        UserEntity userEntity = userMapper.convertToUserEntityFromDTO(user);
         userEntity.setId(id);
         UserEntity updatedUserEntity = repository.save(userEntity);
-        return outputUserMapper.convertFromEntity(updatedUserEntity);
+        return userMapper.convertToUserDTOFromEntity(updatedUserEntity);
         // вопрос: Как организовать метод PATCH? Появление ошибки при передаче не всех параметров (отсутствие токена в сущности сохраняемого объекта).
     }
 

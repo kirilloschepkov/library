@@ -6,7 +6,7 @@ import lombok.experimental.FieldDefaults;
 
 @Data
 @FieldDefaults(level = AccessLevel.PRIVATE)
-public class OutputUserDTO {
+public class UserDTO {
     private String name;
     private String avatarURL;
     private String email;
